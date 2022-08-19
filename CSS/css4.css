@@ -1,0 +1,19 @@
+@charset "UTF-8";
+caption {
+    font-weight: bold;
+    font-size: larger;
+}
+table {
+    border: 1px solid black;
+    margin: 0px auto;
+}
+th {
+    background-color: rgb(131, 131, 131);
+    color: white;
+}
+tr:nth-child(odd) {
+    background-color: rgb(160, 160, 160);
+}
+tr:nth-child(even) {
+    background-color: lightgray;
+}

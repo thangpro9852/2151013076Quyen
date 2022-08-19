@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Test - Ứng dụng Web</title>
+        <style>
+            .web-header {
+                color: rgb(67, 68, 68);
+                font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+                font-size: 1.8em;
+                font-weight: 600;
+                margin: 20px;
+                text-align: center;
+            }
+            .web-body {
+                text-align: center;
+            }
+            .book-list {
+                margin: 0px auto;
+                display: inline-block;
+                margin: 20px;
+            }
+            .book-image {
+                margin: 10px;
+            }
+            .book-name {
+                margin: 20px auto;
+                transition: transform 0.15s;
+            }
+            .book-name:active {
+                transform: scale(0.9);
+            }
+            .book-title {
+                margin: 0px auto;
+                padding: 5px 10px;
+                border-radius: 8px;
+                font-family: Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+                font-size: 18px;
+                text-decoration: none;
+                margin-bottom: 25px;
+                letter-spacing: inherit;
+                color: rgb(46, 135, 252);
+                transition:  color 0.15s, background-color 0.15s, opacity 0.15s;
+            }
+            .book-title:hover {
+                color: rgb(26, 115, 232);
+                background-color: rgb(213, 226, 250);
+            }
+            .book-title:active {
+                opacity: 0.5;
+            }
+            .picture {
+                width: 120px;
+                height: 180px;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: transform 0.25s, opacity 0.25s;
+            }
+            .picture:hover {
+                transform: scale(1.1);
+            }
+            .picture:active {
+                transform: scale(0.9);
+                opacity: 0.5;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="web-header">
+            Danh mục sách dành cho Web Developer
+        </div>
+        <div class="web-body">
+            <div class="book-list">
+                <div class="book-image">
+                    <a href="web.html">
+                        <image src="Images/html.jpg" class="picture" alt="HTML book"></image>
+                    </a>
+                </div>
+                <div class="book-name">
+                    <a href="web.html" class="book-title">
+                        HTML
+                    </a>
+                </div>
+            </div>
+            <div class="book-list">
+                <div class="book-image">
+                    <a href="css.html">
+                        <image src="Images/css.jpg" class="picture" alt="CSS book"></image>
+                    </a>
+                </div>
+                <div class="book-name">
+                    <a href="css.html" class="book-title">
+                        CSS
+                    </a>
+                </div>
+            </div>
+            <div class="book-list">
+                <div class="book-image">
+                    <a href="javascript.html">
+                        <image src="Images/javascript.jpg" class="picture"  alt="Javascript book"></image>
+                    </a>
+                </div>
+                <div class="book-name">
+                    <a href="javascript.html" class="book-title">
+                        Javascript
+                    </a>
+                </div>
+            </div>
+            <div class="book-list">
+                <div class="book-image">
+                    <a href="jquery.html">
+                        <image src="Images/jQuery.jpg" class="picture" alt="jQuery book"></image>
+                    </a>
+                </div>
+                <div class="book-name">
+                    <a href="jquery.html" class="book-title">
+                        jQuery
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.banner {
+    height: 120px;
+    line-height: 120px;
+    background-image: url(../Images/backgrd.png);
+}
+h1 {
+    color: yellow;
+    font-weight: 900;
+    text-shadow: 5px 5px 4px yellow;
+    text-align: center;
+}
+.nav {
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+    background-color: dodgerblue;
+}
+.menu li {
+    display: inline-block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    width: 120px;
+    border-radius: 8px;
+    background-color: blue;
+}
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+.menu a:hover {
+    color: red;
+}
+ul {
+    list-style-type: none;
+}
+.submenu {
+    display: none;
+    position: absolute;
+    margin: 2px;
+}
+.submenu li {
+    margin: 2px;
+}
+.menu li:hover .submenu {
+    display: block;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+}
+.left, .right {
+    width: 15%;
+    min-height: 500px;
+    padding: 2px;
+    background-color: lightgreen;
+}
+.left div {
+    margin-top: 10px;
+}
+.left div h2 {
+    background-color: blue;
+    color: white;
+}
+.left ul li {
+    text-indent: 20px;
+    margin: 5px;
+}
+.right div {
+    text-align: center;
+    margin: 10px auto;
+    width: 70%;
+    height: 100px;
+    padding: 20px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: bisque;
+    box-shadow: 5px 5px 5px gray;
+}
+.content {
+    width: 70%;
+    min-height: 1000px;
+}
+.content>div {
+    display: flex;
+    flex-direction: row;
+}
+.content>div div {
+    width: 50%;
+    height: 250px;
+    border: 1px solid lightgrey;
+    margin: 5px;
+    padding: 3px;
+    overflow: auto;
+}
+.footer {
+    height: 50px;
+    line-height: 50px;
+    color: red;
+    background-color: lightblue;
+    text-align: center;
+}
