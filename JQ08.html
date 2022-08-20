@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>jquery08</title>
+        <style>
+            .container{
+                display: flex;
+            }
+            .left,.right{
+                width: 50%;
+                margin: 15px;
+                background-color: antiquewhite;
+                min-height: 300px;
+            }
+            .right{
+                line-height: 300px;
+            }
+            #view{
+                text-align: center;
+                font-size: 5em;
+                color: blue;
+                font-weight: bold;
+            }
+            fieldset{
+                border:2px solid blue;
+                font-size: 1.2em;
+            }
+            ol li{
+                line-height: 30px;
+                padding-left: 20px;
+                background-color: #9FF;
+            }
+            ol li:nth-child(odd){
+                background-color: #969;
+            }
+            .shadow{
+                text-shadow: 7px 7px 5px gray;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                var arr=[];
+                $("ol>li").click(function(){
+                    $("p#view").text($(this).text());
+                });
+                $("#no").click(function(){
+                    $("#view").removeClass("shadow");
+                });
+                $("#yes").click(function(){
+                    $("#view").addClass("shadow");
+                });
+                $("#textcolor").change(function(){
+                    $("#view").css("color",$(this).val());
+                });
+                $("#btDel").click(function(){
+                    var text=$("ol li:last").text();
+                    if(text=="") return;
+                    arr.unshift(text);
+                    $("ol li:last").remove();
+                });
+                $("#btUndo").click(function(){
+                    if(arr.length==0) return;
+                    var item="<li>"+arr.shift()+"</li>";
+                    $("ol").append(item);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="left">
+                <fieldset>
+                    <legend>Chọn</legend>
+                    <p>
+                        <input type="radio" name="Shadow" id="no" checked>Chữ bình thường
+                        <br>
+                        <input type="radio" name="shadow" id="yes">Chữ có bóng <br>
+                    </p>
+                    <p>
+                        Chọn màu chữ:<input type="color" id="textcolor" value="#0000ff">
+                        <p>
+                            <button id="btDel">Xóa Phần tử cuối</button>
+                            <button id="btUndo">Phục hồi</button>
+                        </p>
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Click chuột vào một chuỗi</legend>
+                    <ol id="list">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JQUERY</li>
+                        <li>JAVASCRIPT</li>
+                    </ol>
+                </fieldset>
+            </div>
+            <div class="right">
+                <p id="view">HTML</p>
+            </div>
+        </div>
+    </body>
+</html>

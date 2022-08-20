@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <title>jquery</title>
+        <style>
+            table{
+                width:  100%;
+                border-collapse: collapse;
+            }
+            table tr td{
+                width: 30%;
+                border: 1px solid #ff751a;
+                padding: 5px;
+            }
+            table td th{
+                border: 1px solid #79ff4d;
+                padding: 5px;
+                background-color: aliceblue;
+            }
+            .newBrgd{
+                background-color: #79ff4d;
+            }
+            caption{
+                font-size:1,5em ;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            $(document).ready(function(){
+                $("#change").click(function(){
+                    $("tr:odd").addClass("newBrgd");
+                })
+                $("#nomal").click(function(){
+                    $("tr:odd").removeClass("newBrgd");
+                })
+            });
+        </script>
+    </head>
+    <body>
+        <table>
+            <caption><h1>BẢNG GIÁ VẬT TƯ</h1></caption>
+            <tr>
+                <td>Tên vật tư</td>
+                <td>Đơn vị tính</td>
+                <td>Đơn giá</td>
+            </tr>
+            <tr>
+                <td>Cát</td>
+                <td>Khối</td>
+                <td>77000</td>
+            </tr>
+            <tr>
+                <td>Đá</td>
+                <td>Khối</td>
+                <td>90000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 1</td>
+                <td>Bao</td>
+                <td>120000</td>
+            </tr>
+            <tr>
+                <td>Xi măng Hà Tiên loại 2</td>
+                <td>Bao</td>
+                <td>100000</td>
+            </tr>
+        </table>
+        <button id="change">Thay đổi màu nền</button>
+        <button id="nomal">Mặc định</button>
+    </body>
+</html>

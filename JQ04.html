@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JQ04</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </head>
+        <script>
+            $(document).ready(function(){
+                $('div').click(function(){
+                    var color=$(this).css("background-color")
+                    var name;
+                    switch(color){
+                        case "rgb(255,0,0)": name="Đỏ"; break;
+                        case "rgb(0,0,255)": name="Xanh Dương"; break;
+                        case "rgb(0,255,0)": name="Xanh lá"; break;
+                        case "rgb(255,0,255)": name="Tím"; break;
+                    }
+                    $('#result').html("Mau ban chon la: "+name+": "+color)
+                    $('#result').css({'color': color,'font-weight': 'bold'})
+                })
+            })
+        </script>
+        <style>
+            #result{
+                clear: left;
+                width: 500px;
+                height: 30px;
+            }
+            div{
+                width: 60px;
+                height: 60px;
+                margin: 5px;
+                float: left ;
+            }
+        </style>
+        <body>
+            <p>Click len cac hinh vuong: </p>
+            <div style="background-color:#00f;"></div>
+            <div style="background-color:#f00;"></div>
+            <div style="background-color:#f0f;"></div>
+            <div style="background-color:#0f0;"></div>
+            <br>
+            <div id="#result"></div>
+        </body>
+    
+</html>

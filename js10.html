@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>JavaScript 10</title>
+        <style>
+            div {
+                width: 400px;
+                height: 200px;
+                text-align: center;
+                background-color: #ff0000;
+                color: #ffff00;
+            }
+        </style>
+        <script>
+            function changeColor() {
+                var bk = document.getElementById("bg").value;
+                var cl = document.getElementById("textColor").value;
+                document.getElementById("text").innerHTML = document.getElementById("inputText").value;
+                document.getElementById("divText").style.backgroundColor=bk;
+                document.getElementById("text").style.color=cl;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="divText">
+            <h1 id="text">Welcome to Vietnam!</h1>
+        </div>
+        <p>Nhập nội dung:
+            <input type="text" id="inputText" autofocus value="Welcome to Vietnam!">
+        </p>
+        <p>Màu nền:
+            <input type="color" id="bg" value="#ff0000">
+        </p>
+        <p>Màu chữ:
+            <input type="color" id="textColor" value="#ffff00">
+        </p>
+        <button onclick="changeColor()">Thực hiện</button>
+    </body>
+</html>

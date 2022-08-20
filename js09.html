@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript 9</title>
+    <script>
+        function taoMang() {
+            var n = document.getElementById("sopt").value;
+            var i;
+            arr = new Array(n);
+            for (i=0; i<n; i++)
+                arr[i] = Math.floor(Math.random()*100)%50;
+            document.getElementById("txtArr1").value = arr.join(" ");
+        }
+        function tang(a, b) {
+            return a - b;
+        }
+        function mangTang() {
+            arr.sort(tang);
+            document.getElementById("txtArr2").value = arr.join(" ");
+        }
+        function giam(a, b) {
+            return b - a;
+        }
+        function mangGiam() {
+            arr.sort(giam);
+            document.getElementById("txtArr3").value = arr.join(" ");
+        }
+    </script>
+</head>
+<body>
+    <label for="sopt">Nhập số phần tử:</label>
+    <input type="numer" id="sopt" value="10" size="10">
+    <br>
+    <button onclick="taoMang()">Tạo mảng</button>
+    <button onclick="mangTang()">Sắp xếp mảng tăng</button>
+    <button onclick="mangGiam()">Sắp xếp mảng giảm</button>
+    <br>
+    <label for="txtArr1">Mảng ban đầu:</label>
+    <input type="text" id="txtArr1" size="50">
+    <br>
+    <label for="txtArr2">Mảng tăng dần:</label>
+    <input type="text" id="txtArr2" size="50">
+    <br>
+    <label for="txtArr3">Mảng giảm dần:</label>
+    <input type="text" id="txtArr3" size="50">
+</body>
+</html>
